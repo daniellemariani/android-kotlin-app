@@ -1,7 +1,9 @@
-package com.dmariani.kotlinapp;
+package com.dmariani.kotlinapp.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.dmariani.kotlinapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
