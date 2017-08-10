@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Kotlin App</string>
+    <string name="app_name">Daily Pic</string>
+    <string name="user_description_message">Hello!\n\nPlease introduce your name to get your daily picture</string>
+    <string name="user_name_hint">Name</string>
+    <string name="user_error_message">Hmm... it seems you haven\'t introduced your name</string>
+    <string name="button_show_my_picture">Show me my picture</string>
+    <string name="button_skip">Skip</string>
 </resources>
