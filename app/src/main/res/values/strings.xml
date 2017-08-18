@@ -3,6 +3,9 @@
     <string name="user_description_message">Hello!\n\nPlease introduce your name to get your daily picture</string>
     <string name="user_name_hint">Name</string>
     <string name="user_error_message">Hmm... it seems you haven\'t introduced your name</string>
+    <string name="picture_message">Hey %1$s! Here is your daily picture</string>
+    <string name="default_name">You</string>
+
     <string name="button_show_my_picture">Show me my picture</string>
     <string name="button_skip">Skip</string>
 </resources>

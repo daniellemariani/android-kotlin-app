@@ -2,10 +2,13 @@ package com.dmariani.kotlinapp.ui.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.dmariani.kotlinapp.R;
 import com.dmariani.kotlinapp.ui.fragment.HomeFragment;
+import com.dmariani.kotlinapp.ui.fragment.PictureFragment;
 
 /**
  * Application's Main Activity
@@ -25,12 +28,23 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
     private void navigatesTo(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.container, fragment)
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
                 .commit();
     }
 
     @Override
+    public void onBackPressed(){
+        FragmentManager manager = getSupportFragmentManager();
+        if (manager.getBackStackEntryCount() > 0) {
+            manager.popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
     public void navigateToShowPicture(String userName) {
-        // TODO navigate
+        navigatesTo(PictureFragment.newInstance(userName));
     }
 }

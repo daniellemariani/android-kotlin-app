@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment {
                     .setAction(R.string.button_skip, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            homeNavigation.navigateToShowPicture(name);
+                            homeNavigation.navigateToShowPicture(getString(R.string.default_name));
                         }
                     }).show();
         } else {
