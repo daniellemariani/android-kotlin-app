@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dmariani.kotlinapp.ui.activity.MainActivity"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".ui.activity.MainActivity">
 
     <ImageView
         android:id="@+id/picture"
@@ -26,7 +26,8 @@
         android:layout_marginBottom="@dimen/form_item_vertical_spacing"
         android:gravity="center"
         android:text="@string/picture_message"
-        app:layout_constraintBottom_toTopOf="@+id/image_view"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/picture"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
