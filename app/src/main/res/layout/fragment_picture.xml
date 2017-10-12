@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/picture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/picture_width"
+        android:layout_height="@dimen/picture_height"
         android:layout_marginBottom="@dimen/form_item_vertical_spacing"
         android:gravity="center"
         android:src="@mipmap/ic_launcher"
@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/text_message"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/zero_dimension"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/form_item_vertical_spacing"
         android:gravity="center"

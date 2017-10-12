@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dmariani.kotlinapp.R;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
 
 /**
  * This fragment will receive the user name and it shows a random picture from a server
@@ -57,6 +59,13 @@ public class PictureFragment extends Fragment {
         }
 
         messageTextView.setText(getString(R.string.picture_message, name));
+        loadImage();
+    }
 
+    private void loadImage() {
+        Picasso.with(getActivity())
+                .load("http://lorempixel.com/150/150/")
+                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
+                .into(pictureImageView);
     }
 }
